@@ -1,0 +1,114 @@
+<form #f="ngForm">
+
+  <p>Situation professionnelle</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0" ngModel checked>
+    <label class="form-check-label" for="inlineRadio1">Etudiant</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" ngModel>
+    <label class="form-check-label" for="inlineRadio2">Actif</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2" ngModel>
+    <label class="form-check-label" for="inlineRadio3">Inactif</label>
+  </div>
+
+  <p>Collège</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCollege" id="inlineRadioCollege1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioCollege1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCollege" id="inlineRadioCollege2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioCollege2">Non</label>
+  </div>
+
+  <p>Lycée</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsLycee" id="inlineRadioLycee1" value="option1">
+    <label class="form-check-label" for="inlineRadioLycee1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsLycee" id="inlineRadioLycee2" value="option2">
+    <label class="form-check-label" for="inlineRadio2">Non</label>
+  </div>
+
+  <p>Primaire</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsPrimaire" id="inlineRadioPrimaire1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioPrimaire1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsPrimaire" id="inlineRadioPrimaire2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioPrimaire2">Non</label>
+  </div>
+
+  <p>Maternelle</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsMaternelle" id="inlineRadioMaternnelle1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioMaternnelle1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsMaternelle" id="inlineRadioMaternnelle2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioMaternnelle2">Non</label>
+  </div>
+
+  <p>Sportif</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsSportif" id="inlineRadioSportif1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioSportif1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsSportif" id="inlineRadioSportif2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioSportif2">Non</label>
+  </div>
+
+  <p>Ville calme</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCalme" id="inlineRadioCalme1" value="option1">
+    <label class="form-check-label" for="inlineRadioCalme1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCalme" id="inlineRadioCalme2" value="option2">
+    <label class="form-check-label" for="inlineRadioCalme2">Non</label>
+  </div>
+
+  <p>Culture</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCulture" id="inlineRadioCulture1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioCulture1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsCulture" id="inlineRadioCulture2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioCulture2">Non</label>
+  </div>
+
+  <p>Festival</p>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsFestival" id="inlineRadioFestival1"
+           value="option1">
+    <label class="form-check-label" for="inlineRadioFestival1">Oui</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptionsFestival" id="inlineRadioFestival2"
+           value="option2">
+    <label class="form-check-label" for="inlineRadioFestival2">Non</label>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-primary" (click)="valider(f)">Valider</button>
+  </div>
+
+</form>
+

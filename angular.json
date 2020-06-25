@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ProjetML-front"
+    }
+  },
+  "defaultProject": "ProjetML-front",
+  "cli": {
+    "analytics": false
+  }
 }
