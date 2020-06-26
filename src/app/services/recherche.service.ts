@@ -12,19 +12,8 @@ export class RechercheService {
   constructor(private http: HttpClient) {
   }
 
-  getRechercheCommune(): Observable<any> {
+  getRechercheCommune(body): Observable<any> {
     const myheader = new HttpHeaders().set('Content-Type', 'application/json');
-    let body = {
-      Situation: '3',
-      College: '1',
-      Lycee: '1',
-      Primaire: '1',
-      Maternelle: '1',
-      Sportif: '1',
-      calme: '1',
-      Bibliotheque: '0',
-      Festival: '0'
-    };
     return this.http.post<any>(this.url, body, {headers: myheader});
   }
 

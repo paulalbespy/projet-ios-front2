@@ -1,114 +1,211 @@
-<form #f="ngForm">
+<div class="card">
 
-  <p>Situation professionnelle</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0" ngModel checked>
-    <label class="form-check-label" for="inlineRadio1">Etudiant</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" ngModel>
-    <label class="form-check-label" for="inlineRadio2">Actif</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2" ngModel>
-    <label class="form-check-label" for="inlineRadio3">Inactif</label>
-  </div>
+  <!--Card content-->
+  <div class="card-body px-lg-6" class="text-center" >
 
-  <p>Collège</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCollege" id="inlineRadioCollege1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioCollege1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCollege" id="inlineRadioCollege2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioCollege2">Non</label>
-  </div>
+    <!-- Form -->
+    <form class="text-center" style="color: #767676;" action="#!">
+      <p>Veuillez répondre au questionnaire afin de découvir votre commune</p>
+      <!-- Situation professionnelle -->
+      <div class="container">
+        <h6>1. Quelle est votre situation?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sit" id="sit1" value="1" [(ngModel)]="situation" checked>
+          <label class="form-check-label" for="sit1">
+            Actif
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sit" id="sit2" [(ngModel)]="situation" value="2">
+          <label class="form-check-label" for="sit2">
+            Non-actif
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sit" id="sit3" [(ngModel)]="situation" value="3">
+          <label class="form-check-label" for="sit3">
+            Étudiant
+          </label>
+        </div>
+      </div>
 
-  <p>Lycée</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsLycee" id="inlineRadioLycee1" value="option1">
-    <label class="form-check-label" for="inlineRadioLycee1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsLycee" id="inlineRadioLycee2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">Non</label>
-  </div>
+      <!-- Maternelle -->
+      <div class="container">
+        <h6>2. Avez-vous besoin d'une école maternelle?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="maternelle" id="maternelle1" value="1" [(ngModel)]="maternelle" checked>
+          <label class="form-check-label" for="maternelle1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="maternelle" id="maternelle0" [(ngModel)]="maternelle" value="0">
+          <label class="form-check-label" for="maternelle0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Primaire</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsPrimaire" id="inlineRadioPrimaire1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioPrimaire1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsPrimaire" id="inlineRadioPrimaire2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioPrimaire2">Non</label>
-  </div>
+      <!-- Primaire -->
+      <div class="container">
+        <h6>3. Avez-vous besoin d'une école primaire?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="primaire" id="primaire1" value="1" [(ngModel)]="primaire" checked>
+          <label class="form-check-label" for="primaire1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="primaire" id="primaire0" value="0" [(ngModel)]="primaire">
+          <label class="form-check-label" for="primaire0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Maternelle</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsMaternelle" id="inlineRadioMaternnelle1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioMaternnelle1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsMaternelle" id="inlineRadioMaternnelle2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioMaternnelle2">Non</label>
-  </div>
+      <!-- College -->
+      <div class="container">
+        <h6>4. Avez-vous besoin d'un collège?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="college" id="college1" value="1" [(ngModel)]="college" checked>
+          <label class="form-check-label" for="college1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="college" id="college0" value="0" [(ngModel)]="college">
+          <label class="form-check-label" for="college0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Sportif</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsSportif" id="inlineRadioSportif1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioSportif1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsSportif" id="inlineRadioSportif2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioSportif2">Non</label>
-  </div>
+      <!-- Lycée -->
+      <div class="container">
+        <h6>5. Avez-vous besoin d'un lycée?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="lycee" id="lycee1" value="1" [(ngModel)]="lycee" checked>
+          <label class="form-check-label" for="lycee1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="lycee" id="lycee0" value="0" [(ngModel)]="lycee">
+          <label class="form-check-label" for="lycee0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Ville calme</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCalme" id="inlineRadioCalme1" value="option1">
-    <label class="form-check-label" for="inlineRadioCalme1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCalme" id="inlineRadioCalme2" value="option2">
-    <label class="form-check-label" for="inlineRadioCalme2">Non</label>
-  </div>
+      <!-- sport -->
+      <div class="container">
+        <h6>6. Pratiquez-vous des activités sportives?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sport" id="sport1" value="1" [(ngModel)]="sportif" checked>
+          <label class="form-check-label" for="sport1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sport" id="sport0" value="0" [(ngModel)]="sportif">
+          <label class="form-check-label" for="sport0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Culture</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCulture" id="inlineRadioCulture1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioCulture1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsCulture" id="inlineRadioCulture2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioCulture2">Non</label>
-  </div>
+      <!-- bibilotheque -->
+      <div class="container">
+        <h6>7. Avez-vous besoin d'une bibliothèque près de chez vous?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="bibilotheque" id="bibilotheque1" value="1" [(ngModel)]="bibliotheque" checked>
+          <label class="form-check-label" for="bibilotheque1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="bibilotheque" id="bibilotheque0" value="0" [(ngModel)]="bibliotheque">
+          <label class="form-check-label" for="bibilotheque0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <p>Festival</p>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsFestival" id="inlineRadioFestival1"
-           value="option1">
-    <label class="form-check-label" for="inlineRadioFestival1">Oui</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptionsFestival" id="inlineRadioFestival2"
-           value="option2">
-    <label class="form-check-label" for="inlineRadioFestival2">Non</label>
-  </div>
+      <!-- festival -->
+      <div class="container">
+        <h6>8. Aimez-vous faire la fête?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="festival" id="festival1" value="1" [(ngModel)]="festival" checked>
+          <label class="form-check-label" for="festival1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="festival" id="festival0" value="0" [(ngModel)]="festival">
+          <label class="form-check-label" for="festival0">
+            Non
+          </label>
+        </div>
+      </div>
 
-  <div>
-    <button type="button" class="btn btn-primary" (click)="valider(f)">Valider</button>
+      <!-- calme -->
+      <div class="container">
+        <h6>9. Ou préférez-vous être au calme?</h6>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="calme" id="calme1" value="1" [(ngModel)]="calme" checked>
+          <label class="form-check-label" for="calme1">
+            Oui
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="calme" id="calme0" value="0" [(ngModel)]="calme">
+          <label class="form-check-label" for="calme0">
+            Non
+          </label>
+        </div>
+      </div>
+
+      <!-- Sign in button -->
+      <button class="btn btn-outline-info btn-rounded z-depth-0 my-4 waves-effect " type="button" (click)="valider()"> Demander mes communes</button>
+      <div class="alert alert-success" *ngIf="isVisible" role="alert">
+        Ci-dessous les communes adaptées à votre profil.
+      </div>
+    </form>
+    <!-- Form -->
   </div>
+</div>
 
-</form>
-
+<table class="table" *ngIf="isVisible">
+  <thead>
+  <tr>
+    <th scope="col">Code postal</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Population</th>
+    <th scope="col">Superficie</th>
+    <th scope="col">Maternelles</th>
+    <th scope="col">Elémentaires</th>
+    <th scope="col">Colleges</th>
+    <th scope="col">Lycées</th>
+    <th scope="col">Equipements sportif</th>
+    <th scope="col">Bibliothèque</th>
+    <th scope="col">Festival</th>
+    <th scope="col">Position géographique</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let commune of communesPrediction">
+    <th scope="row">{{ commune.map.code_postal }}</th>
+    <td>{{ commune.map.commune }}</td>
+    <td>{{ commune.map.population }}</td>
+    <td>{{ commune.map.superficie }}</td>
+    <td>{{ commune.map.maternelles }}</td>
+    <td>{{ commune.map.elementaires }}</td>
+    <td>{{ commune.map.colleges }}</td>
+    <td>{{ commune.map.lycees }}</td>
+    <td>{{ commune.map.nb_equipements_sportifs }}</td>
+    <td>{{ commune.map.bibliotheque }}</td>
+    <td>{{ commune.map.nb_festivals }}</td>
+    <td>{{ commune.map.geo_point }}</td>
+  </tr>
+  </tbody>
+</table>
